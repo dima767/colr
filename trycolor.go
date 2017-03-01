@@ -22,6 +22,6 @@ func main() {
 
 	// Create a custom print function for convenient
 	red := color.New(color.Bold, color.FgHiGreen).PrintfFunc()
-	red("warning...\n")
+	red("SUCCESS..\n")
 
 }
