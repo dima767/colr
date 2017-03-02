@@ -1,0 +1,17 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "Qh984cnR6TtyAUuvj7OjcxVu+9A=",
+			"path": "github.com/dima767/mypackage/pkg1",
+			"revision": ""
+		},
+		{
+			"checksumSHA1": "yQ0vTB/Qksxqa/pCxC6XCh2emPU=",
+			"path": "github.com/dima767/mypackage/pkg2",
+			"revision": ""
+		}
+	],
+	"rootPath": "github.com/dima767/colr"
+}

@@ -1,27 +1,15 @@
 plugins {
-    // Use this variant if you use this as primary plugin
-    // In this case every task is simply named like: build, clean, test, ...
-    id 'org.echocat.golang' version '0.1.15'
+    id 'com.github.blindpirate.gogradle' version '0.2.7'
 }
-
-group 'github.com/dima767/colr'
 
 golang {
-    // Set default platforms to build but make it overwritable via -Dplatforms=<..>
-    //platforms = System.getProperty("platforms", "linux-amd64,windows-amd64,darwin-amd64")
-    dependencies {
-        build 'github.com/fatih/color'
-    }
+    packagePath = 'github.com/dima767/colr'
+
+    outputLocation = '/opt/local/bin'
+    // Pattern or output, note that it must be single quote here
+    outputPattern = '${packageName}'
 }
 
-task installMacOsBinary(type: Copy, dependsOn: 'build') {
-    from 'build/out'
-    into '/opt/local/bin/'
-    rename { String f ->
-      f.replace('-darwin-amd64','')
-    }
-}
-
-task wrapper(type: Wrapper, description: "Update the Gradle wrapper") {
-    gradleVersion = 3.4
+dependencies {
+    build 'github.com/fatih/color'
 }
